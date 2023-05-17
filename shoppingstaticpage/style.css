@@ -1,0 +1,493 @@
+ @import url('https://fonts.googleapis.com/css2?family=Kaushan+Script&family=Playfair+Display:ital,wght@1,500&family=Poppins:wght@300;400;500;600;700&family=Raleway:wght@300&display=swap');
+
+
+/* font-family: 'Kaushan Script', cursive;
+font-family: 'Playfair Display', serif;
+font-family: 'Poppins', sans-serif;
+font-family: 'Raleway', sans-serif; */
+
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+:root{
+    --maincolor:#A91B60;
+    --primary:#FF0080;
+    --secondary:#EC9EC0;
+    --ternary:#EBE0D0;
+    --black:rgba(0,0,0,0.08);
+    --white:#fff;
+}
+
+/* navbar */
+
+.navbar{
+    max-width: 1300px;
+    width: 100%;
+    background-color: var(--white);
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin: 0px auto;
+    padding: 1.5em;
+    box-shadow: rgba(22, 22, 31, 0.25) 0px 50px 100px -20px,rgba(43, 39, 39, 0.03) 0px 30px 60px -30px;
+}
+.logocontainer img{
+    width: 100px;
+    object-fit: contain;
+
+}
+nav{
+   width: 40%;
+   background-color: white;
+}
+nav ul{
+    display: flex;
+    list-style: none;
+    justify-content: space-between;
+    align-items: center;
+
+}
+nav a{
+    text-decoration: none;
+    font-size: 1.1rem;
+    color: var(--maincolor);
+    font-family: 'Poppins', sans-serif;
+}
+.icons{
+    display: flex;
+}
+.icons .fa-solid{
+    margin-left: 1em;
+    font-size: 1.1rem;
+
+}
+.icons .fa-sharp{
+    display: none;
+}
+
+
+/* media queries for navbar*/
+
+@media screen and (max-width:990px){
+    html{
+        font-size: 15px;
+    }
+}
+@media screen and (max-width:768px){
+    html{
+        font-size: 14px;
+    }
+    .navbar{
+        max-width: 670px;
+    }
+    nav ul{
+        position: absolute;
+        top: 0px;
+        left: 0px;
+        background-color: var(--maincolor);
+        width: 100%;
+        display: block;
+        text-align: center;
+        padding: 1em;
+        display: none;
+    }
+    nav li{
+        margin-bottom: 1em;;
+
+    }
+    nav a{
+        color: var(--ternary);
+        font-size: 1.2rem;;
+    }
+    .icons .fa-solid{
+        
+        font-size: 1.2rem;
+}
+
+.icons .fa-sharp{
+    display: block;
+}
+
+}
+@media screen and (max-width:568px){
+
+    html{
+        font-size: 12px;
+    }
+
+    logocontainer img{
+        width: 80px;
+    }
+    .navbar{
+        max-width: 510px;
+    }
+
+}
+
+
+/* navbar Ends */
+
+/* section 1 starts */
+
+
+.container{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    max-width: 1200px;
+    width: 100%;
+    margin: 0 auto 1em;
+}
+.contentbox{
+    width: 45%;
+    padding: .3em;
+}
+.contentbox h1{
+    font-size: 2.8rem;
+    font-family: 'Raleway', sans-serif;
+    color: var(--maincolor);
+
+}
+.shopping{
+    font-size: 3rem;
+    font-family: 'Kaushan Script', cursive;
+    display: inline-block;
+    width: 100%;
+    text-align: right;
+    color: var(--maincolor);
+}
+.contentbox p{
+    font-size: .9rem;
+    color: black;
+    font-family: 'Poppins', sans-serif;
+    margin: 1.5em 0;
+}
+.btn{
+    width: 35%;
+    padding: .5em 1.3em;
+    font-size: 1.1rem;
+    margin-top: 1.5em;
+    border: none;
+    outline: none;
+    background-color: var(--maincolor);
+    color: var(--ternary);
+    cursor: pointer;
+}
+.imagecontainer img{
+    max-width: 100%;
+
+}
+
+/* media queries for section1 */
+
+@media screen and (max-width:990px){
+    .container{
+        max-width: 950px;
+    }
+    
+}
+
+@media screen and (max-width:768px){
+    .container{
+        flex-direction: column;
+    }
+    .contentbox{
+        width: 85%;
+    }
+    .contentbox h1{
+        font-size: 2.2rem;
+        margin-top: .5em;
+    }
+    .shopping{
+        font-size: 2.2rem;
+        text-align: center;
+    }
+    .btn{
+        width: 25%;
+        padding: .8em;
+        font-size: 1rem;
+    }
+    .imagecontainer img{
+        max-width: 80%;
+        display: block;
+        margin: 0 auto;
+    }
+}
+@media screen and (max-width:600px){
+    .btn{
+        width: 30%;
+    }
+}
+@media screen and (max-width:450px){
+    html{
+        font-size: 12px;
+    }
+    .container{
+        flex-direction: column-reverse;
+    }
+    .btn{
+        width: 40%;
+    }
+    .contentbox h1{
+        text-align: center;
+    }
+}
+@media screen and (max-width:300px){
+    .btn{
+        width: 50%;
+    }
+}
+
+/* section 1 Ends */
+
+
+
+/* section 2 starts */
+
+.promotion{
+    justify-content: space-between;
+    margin-top: 1em;
+    padding: 1em 0;
+    background-image: linear-gradient(var(--secondary),var(--ternary),var(--secondary));
+}
+.cards{
+    width: 40%;
+    display: flex;
+    align-items: center;
+    box-shadow: 0 0 30px rgb(129, 124, 124);
+    background-color: var(--white);
+    margin: 0 20px;
+}
+.cardimg img{
+    width: 50%;
+}
+.cardcontent{
+    padding: 1em;
+    width: 100%;
+    text-align: center;
+}
+.cardcontent h1{
+    font-family: 'Kaushan Script', cursive;
+}
+.btnAll{
+    width: 80%;
+}
+/* media queries for section2 */
+@media screen and (max-width:990px){
+    .btnAll{
+        width: 100%;
+        font-size: .9rem;
+    }
+    .cardcontent h1{
+        font-size: 1.5rem;
+    }
+}
+@media screen and (max-width:768px){
+    .cards{
+        width: 90%;
+        margin: 10px;
+    }
+    .btnAll{
+        width: 35%;
+    }
+    .cardcontent{
+        text-align: right;
+    }
+    .cardimg img{
+        width: 80%;
+    }
+}
+@media screen and (max-width:568px){
+    .cardimg img{
+        width: 50%;
+    }
+    .btnAll{
+        width: 55%;
+    }
+
+}
+@media screen and (max-width:450px){
+    .btnAll{
+        width: 100%;
+    }
+}
+@media screen and (max-width:300px){
+    .cardimg img{
+        width: 60%;
+    }
+    .cardcontent h1{
+        font-size: 1.2rem;
+    }
+}
+/* section 2 Ends */
+
+
+/* section 3 starts */
+
+    .title h1{
+        font-size: 2.2rem;
+        text-align: center;
+        margin: 0.5em 0;
+        font-family: 'Raleway', sans-serif;
+    }
+    .productcards{
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: space-around;
+        margin: 2em 0;
+        flex-direction: row;
+        }
+    .productcard{
+        width: 22%;
+        padding: 0 1em;
+        box-shadow: 4px 4px 20px -5px var(--secondary);
+        margin: 1em 20px;
+    }
+    .productcard img{
+        width: 90%;
+        margin: 0 auto;
+        display: block;
+        height: 300px;
+        object-fit: contain;
+    }
+    .productcard h2{
+        font-size: 1.8rem;
+        font-family: 'Kaushan Script', cursive;
+        color: var(--maincolor);
+    }
+    .actualprice{
+        margin: .5em 0;
+        font-size: 1.1rem;
+        font-weight: bold;
+
+    }
+    .price{
+        text-decoration: line-through;
+        display: inline-block;
+        margin-right: .5em;
+        font-weight: normal;
+        font-size: 1.2rem;
+    }
+    .rating{
+        font-size: 1rem;
+        color: var(--maincolor);
+        margin: .5em 0;
+    }
+
+/* media queries for section3 */
+@media screen and (max-width:990px){
+    .productcard{
+        width: 30%;
+    }
+
+}
+@media screen and (max-width:768px){
+    .productcard{
+        width: 40%;
+    }
+}
+@media screen and (max-width:568px){
+    .productcard{
+        width: 80%;
+    }
+    .title h1{
+        font-size: 2.5rem;
+    }
+    .productcard img{
+        height: 200px;
+    }
+    
+}
+
+
+
+/* section 3 Ends */
+
+
+/* section 5 starts */
+
+.servicetext{
+    text-align: center;
+    margin-bottom: .5em;
+}
+
+/* section 5 ends */
+
+
+/* section 7 starts */
+.brands{
+   flex-wrap: wrap;
+}
+.brands img{
+    width: 100px;
+    margin-bottom: 1em;
+}
+
+
+/* media quieres */
+ 
+@media screen and (max-width:768px){
+    .brands{
+        flex-direction: row;
+    }
+}
+
+@media screen and (max-width:568px){
+    .brands{
+        flex-direction: column;
+    }
+}
+
+/* section 7 ends */
+
+
+/* section 8 starts */
+  .footer{
+    background: black;
+    color: white;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    padding: 1.5rem;
+    flex-wrap: wrap;
+  }
+  .footertext{
+    width: 20%;
+  }
+  .footertext p{
+    font-family: 'Poppins', sans-serif;
+    font-size: .9rem;
+    margin-bottom: .2rem;
+  }
+  .footertext h2{
+    color: var(--maincolor);
+    margin-bottom: .3rem;
+
+  }
+  .icon{
+     font-size: 1.1rem;
+     margin-top: 1em;
+     display: flex;
+     justify-content: space-between;
+     text-shadow: -1px -1px var(--maincolor);
+  }
+ .icon:hover{
+    color: var(--maincolor);
+ }
+
+ /* media quieres */
+ 
+@media screen and (max-width:768px){
+    .footer{
+        flex-direction: row;
+    }
+    .footertext{
+        width: 40%;
+        margin-bottom: 1em;
+        
+    }
+}
+
+/* section 8 ends */
