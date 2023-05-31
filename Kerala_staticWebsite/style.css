@@ -1,0 +1,17 @@
+*{
+    font-family: montserrat;
+}
+body{
+    background: white;
+}
+nav{
+    background: rgb(21, 15, 99);
+    color: white;
+}
+nav .span-color{
+    font-size: 35px;
+    color: rgb(19, 255, 19);
+}
+nav .size{
+    font-size: 15px;
+}
